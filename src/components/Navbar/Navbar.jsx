@@ -2,6 +2,7 @@ import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
+import { IoMenu } from "react-icons/io5";
 
 
 const Navbar = () => {
@@ -44,6 +45,11 @@ const Navbar = () => {
                         </a>
                         <a href="" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500'>
                             Sign Up
+                        </a>
+
+                        {/* Hamburger */}
+                        <a href="" className='text-zinc-800 text-3xl'>
+                            <IoMenu/>
                         </a>
                     </div>
                 </nav>
