@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaHeart } from "react-icons/fa";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
@@ -8,15 +8,26 @@ import { RiMenu4Fill } from "react-icons/ri";
 
 const Navbar = () => {
     const [showMunu, setShowMenu] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = () => {
         setShowMenu(!showMunu)
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return ()=> window.removeEventListener('scroll', handleScroll);
+    }, [])
+
+
     return (
         <>
-            <header className='bg-white fixed top-0 right-0 left-0'>
-                <nav className='max-w-[1400px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center'>
+            <header className={`bg-white fixed top-0 right-0 left-0 z-50 ${isScrolled ? 'drop-shadow-[0_4px_25px_rgba(0,0,0,0.2)]' : ''}`}>
+                <nav className='max-w-[1400px] mx-auto px-10 md:h-[14vh] h-[10vh] flex justify-between items-center'>
                     <a href="" className='text-2xl md:text-3xl font-bold '>Gr<span className='text-orange-500 uppercase'>o</span>cify</a>
 
                     {/* Desktop Menu */}
@@ -47,7 +58,7 @@ const Navbar = () => {
                         </a>
 
                         {/* login signup */}
-                        <div className='md:flex md:gap-4 hidden flex'>
+                        <div className='md:flex md:gap-4 hidden'>
                             <a href="" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500'>
                                 LogIn
                             </a>
@@ -58,13 +69,16 @@ const Navbar = () => {
 
                         {/* Hamburger */}
                         <a className='text-zinc-800 text-3xl md:hidden' onClick={toggleMenu}>
-                            {showMunu ? <RiMenu4Fill/> : <IoMenu /> }
-                            
+                            {showMunu ? <RiMenu4Fill /> : <IoMenu />}
+
                         </a>
                     </div>
 
                     {/* mobile menu  */}
-                    <ul className={`md:hidden flex flex-col gap-x-13 gap-y-10 bg-orange-500/15 backdrop-blur-xl rounded-lg p-10  items-center absolute top-30 -left-full transform -translate-x-1/2 transition-all duration-500 ${showMunu? 'left-1/2':""}`}>
+                    <ul
+                        className={`md:hidden flex flex-col gap-y-10 bg-orange-500/15 backdrop-blur-xl rounded-lg p-10 items-center absolute top-20 left-1/2 transform -translate-x-1/2 transition-all duration-500 ${showMunu ? "opacity-100 visible" : "opacity-0 invisible"
+                            }`}
+                    >
 
                         {/* input field */}
                         <li className='flex p-1 border-2 border-orange-500 rounded-4xl '>
@@ -82,7 +96,7 @@ const Navbar = () => {
 
                         {/* login signin */}
                         <li><a href="" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500'>
-                             LogIn
+                            LogIn
                         </a></li>
                         <li><a href="" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500'>
                             Sign Up
