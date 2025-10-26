@@ -44,7 +44,7 @@ const Values = () => {
 
     return (
         <section>
-            <div className='max-w-[1400px] mx-auto px-10 pY-20 '>
+            <div className='max-w-[1400px] mx-auto px-10 py-20 md:mb-0 -mb-50'>
                 <Heading highlight='Our' heading='Values' />
 
                 <div className='flex md:flex-row flex-col items-center md:gap-5 mt-15'>
