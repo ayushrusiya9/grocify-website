@@ -3,6 +3,7 @@ import Heading from '../Heading/Heading'
 import ProductsList from '../ProductList/ProductsList'
 import Cards from '../Cards/Cards'
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
 
 
 const Products = () => {
@@ -49,7 +50,9 @@ const Products = () => {
 
                 {/* view all button */}
                 <div className='mt-15 mx-auto w-fit'>
-                    <Button btnText='View All' />
+                    <Link to="/allproducts">
+                        <Button btnText='View All' />
+                    </Link>
                 </div>
             </div>
 
