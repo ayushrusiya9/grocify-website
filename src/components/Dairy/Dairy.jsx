@@ -1,9 +1,11 @@
 import React from 'react'
+import CategoryPage from '../CategoryPage/CategoryPage'
+import bgImage from '../../assets/dairy-banner.jpg'
 
 const Dairy = () => {
   return (
     <div>
-      <h1>i am fom dairy</h1>
+      <CategoryPage bg={bgImage} title='Dairy & Eggs' categories='Dairy'/>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import Dairy from './components/Dairy/Dairy';
 import Seafood from './components/Seafood/Seafood';
 import AllProducts from './components/AllProducts/AllProducts';
 import Layout from './components/Layout/Layout';
+import About from './components/About/About';
 
 const App = () => {
 
@@ -18,6 +19,10 @@ const App = () => {
         {
           path: '/',
           element: <Home />,
+        },
+        {
+          path: '/about',
+          element: <About />,
         },
         {
           path: '/fruits',
@@ -34,7 +39,11 @@ const App = () => {
         {
           path: '/allproducts',
           element: <AllProducts />
-        }
+        },
+        {
+          path: '/products',
+          element: <AllProducts />
+        },
       ]
     },
 
