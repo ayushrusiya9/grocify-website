@@ -9,6 +9,8 @@ import AllProducts from './components/AllProducts/AllProducts';
 import Layout from './components/Layout/Layout';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Order from './components/CRUD/Order';
+import Cart from './components/CRUD/Cart';
 
 const App = () => {
 
@@ -48,6 +50,14 @@ const App = () => {
         {
           path: '/contact',
           element: <Contact />
+        },
+        {
+          path: '/order',
+          element: <Order />
+        },
+        {
+          path: '/cart',
+          element: <Cart />
         },
       ]
     },

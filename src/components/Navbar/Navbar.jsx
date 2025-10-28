@@ -46,20 +46,18 @@ const Navbar = () => {
   const toggleMenu = () => setShowMenu(!showMenu);
 
   const navLinkClass = ({ isActive }) =>
-    `font-semibold tracking-wider ${
-      isActive
-        ? "text-orange-500"
-        : "text-zinc-800 hover:text-orange-500 transition"
+    `font-semibold tracking-wider ${isActive
+      ? "text-orange-500"
+      : "text-zinc-800 hover:text-orange-500 transition"
     }`;
 
   return (
     <>
       <header
-        className={`bg-white fixed top-0 right-0 left-0 z-50 ${
-          isScrolled
+        className={`bg-white fixed top-0 right-0 left-0 z-50 ${isScrolled
             ? "drop-shadow-[0_4px_25px_rgba(0,0,0,0.15)] transition-all"
             : ""
-        }`}
+          }`}
       >
         <nav className="max-w-[1400px] mx-auto px-10 md:h-[14vh] h-[10vh] flex justify-between items-center">
           {/* Logo */}
@@ -110,7 +108,9 @@ const Navbar = () => {
               <FaHeart />
             </a>
             <a className="text-zinc-800 text-2xl cursor-pointer">
-              <HiMiniShoppingBag />
+              <Link to="/cart">
+                <HiMiniShoppingBag />
+              </Link>
             </a>
 
             {/* Signin / Signup / Logout Buttons */}
@@ -151,9 +151,8 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <ul
-            className={`md:hidden flex flex-col gap-y-8 bg-orange-500/15 backdrop-blur-xl rounded-lg p-10 items-center absolute top-20 left-1/2 transform -translate-x-1/2 transition-all duration-500 ${
-              showMenu ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
+            className={`md:hidden flex flex-col gap-y-8 bg-orange-500/15 backdrop-blur-xl rounded-lg p-10 items-center absolute top-20 left-1/2 transform -translate-x-1/2 transition-all duration-500 ${showMenu ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
           >
             <li className="flex p-1 border-2 border-orange-500 rounded-4xl">
               <input
