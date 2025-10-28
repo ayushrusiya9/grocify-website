@@ -8,6 +8,7 @@ import Seafood from './components/Seafood/Seafood';
 import AllProducts from './components/AllProducts/AllProducts';
 import Layout from './components/Layout/Layout';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 const App = () => {
 
@@ -43,6 +44,10 @@ const App = () => {
         {
           path: '/products',
           element: <AllProducts />
+        },
+        {
+          path: '/contact',
+          element: <Contact />
         },
       ]
     },
