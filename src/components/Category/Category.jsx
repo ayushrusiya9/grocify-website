@@ -21,6 +21,7 @@ const Category = () => {
                 <div className='bg-zinc-100 pt-17 p-8 rounded-xl'>
                     <h4 className='text-zinc-800 text-3xl font-bold'>{card.title}</h4>
                     <p className='text-zinc-600 mt-3 mb-9'>{card.description}</p>
+                    
                     <Link to={card.path}>
                         <Button btnText={'See all'}/>
                     </Link>

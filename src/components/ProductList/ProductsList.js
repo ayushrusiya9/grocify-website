@@ -26,6 +26,7 @@ import RicottaCheese from '../../assets/ricotta-cheese.png'
 import Grapes from '../../assets/grapes.png'
 import Lettuce from '../../assets/lettuce.png'
 
+
 const products = [
     {
         id: 1,

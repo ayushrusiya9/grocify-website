@@ -24,14 +24,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Sync state with localStorage (multi-tab or manual update)
+  
   useEffect(() => {
     const handleStorageChange = () => {
       setIsLoggedIn(localStorage.getItem("isLoggedIn") === "true");
     };
     window.addEventListener("storage", handleStorageChange);
     return () => window.removeEventListener("storage", handleStorageChange);
-  }, []);
+  }, [isLoggedIn]);
 
   // Logout function
   const handleLogout = () => {
@@ -92,7 +92,7 @@ const Navbar = () => {
           {/* Right Section */}
           <div className="flex items-center gap-x-5">
             {/* Search Bar */}
-            <div className="md:flex p-1 border-2 border-orange-500 rounded-4xl hidden">
+            {/* <div className="md:flex p-1 border-2 border-orange-500 rounded-4xl hidden">
               <input
                 type="text"
                 placeholder="Search....."
@@ -101,7 +101,7 @@ const Navbar = () => {
               <button className="bg-gradient-to-b from-red-600 to-orange-500 text-white w-10 h-10 flex justify-center items-center rounded-full text-xl">
                 <CiSearch />
               </button>
-            </div>
+            </div> */}
 
             {/* Icons */}
             <a className="text-zinc-800 text-2xl cursor-pointer">
