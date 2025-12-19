@@ -1,16 +1,35 @@
-# React + Vite
+# Grocify Website 🍎🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Simple Grocery Web App built with React + JSON Server** — demo grocery store with basic CRUD operations and login/signup using local storage for demo data.
 
-Currently, two official plugins are available:
+## 🔍 Demo
+Live here: https://grocify-ebon.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 What This Project Does
+This project is a **front-end grocery app** where users can:
+- 🛍️ Browse grocery items
+- ➕ Add new items (CRUD via JSON Server)
+- ✏️ Edit or delete existing items
+- 🔐 Login & Signup (local storage demo — not secure for production)
 
-## React Compiler
+It’s a **learning & showcase project**, helping you understand:
+✔ React state & props  
+✔ JSON Server for mock backend  
+✔ CRUD operations  
+✔ Routing & form handling  
+✔ Local storage for saving auth demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧠 Why It Matters
+This is not just a static UI — it shows you how a real web app manages data, interacts with a server (mock), and handles user flows like login and item management.
 
-## Expanding the ESLint configuration
+Perfect for:
+✔ Beginners in React  
+✔ Portfolio piece  
+✔ Practice with frontend + backend mock
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tech Stack
+- **React** (with Vite)  
+- **JSON Server** (mock REST API)  
+- **Local Storage** (demo auth)  
+- **CSS (basic styling)**
+
